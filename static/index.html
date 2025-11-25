@@ -306,7 +306,8 @@
                                 <div>
                                     <label class="block text-gray-700 text-sm font-semibold mb-1">CIDR *</label>
                                     <input v-model="newNetwork.cidr" type="text" required placeholder="例如: 192.168.1.0/24"
-                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                        @blur="newNetwork.cidr = newNetwork.cidr.trim()">
                                     <p class="text-xs text-gray-500 mt-1">支持格式: 192.168.1.0/24 或 10.0.0.0/8</p>
                                 </div>
                                 <div>
