@@ -24,6 +24,21 @@
 - **存储**: JSON文件
 - **部署**: Docker + Docker Compose
 
+## 界面预览
+
+登录界面
+![登录](./images/login.png)
+
+首页
+![首页](./images/index.png)
+
+添加网段
+![添加网段](./images/addsubnet.png)
+
+IP资源状态
+![IP资源状态](./images/scan.png)
+
+
 ## 快速开始
 
 ### 方式一: Docker部署（推荐）
