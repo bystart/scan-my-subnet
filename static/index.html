@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP资源扫描系统</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.5/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        [v-cloak] { display: none; }
+        .fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
+        .fade-enter-from, .fade-leave-to { opacity: 0; }
+        .slide-enter-active, .slide-leave-active { transition: all 0.3s ease; }
+        .slide-enter-from { transform: translateY(-10px); opacity: 0; }
+        .slide-leave-to { transform: translateY(10px); opacity: 0; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.2s ease; }
+        .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .pulse-animation { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        .ip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.5rem; }
+        @media (max-width: 640px) { .ip-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.4rem; } }
+
+        /* Toast通知样式 */
+        .toast-enter-active { animation: slideInRight 0.3s ease; }
+        .toast-leave-active { animation: slideOutRight 0.3s ease; }
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        /* Confirm对话框动画 */
+        .confirm-enter-active, .confirm-leave-active { transition: all 0.2s; }
+        .confirm-enter-from, .confirm-leave-to { opacity: 0; transform: scale(0.9); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div id="app" v-cloak>
+        <!-- Toast通知组件 -->
+        <div class="fixed top-4 right-4 z-50 space-y-2">
+            <transition-group name="toast">
+                <div v-for="toast in toasts" :key="toast.id"
+                    :class="[
+                        'px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2 min-w-64',
+                        toast.type === 'success' ? 'bg-green-500 text-white' :
+                        toast.type === 'error' ? 'bg-red-500 text-white' :
+                        toast.type === 'warning' ? 'bg-yellow-500 text-white' :
+                        'bg-blue-500 text-white'
+                    ]">
+                    <i :class="[
+                        'fas',
+                        toast.type === 'success' ? 'fa-check-circle' :
+                        toast.type === 'error' ? 'fa-times-circle' :
+                        toast.type === 'warning' ? 'fa-exclamation-triangle' :
+                        'fa-info-circle'
+                    ]"></i>
+                    <span class="flex-1 text-sm font-medium">{{ toast.message }}</span>
+                    <button @click="removeToast(toast.id)" class="hover:opacity-75">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </transition-group>
+        </div>
+
+        <!-- Confirm确认对话框 -->
+        <transition name="fade">
+            <div v-if="confirmDialog.show" class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-50">
+                <transition name="confirm">
+                    <div v-if="confirmDialog.show" class="bg-white rounded-lg shadow-xl p-5 max-w-sm w-full mx-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-question-circle text-yellow-500 text-2xl mt-1"></i>
+                            <div class="flex-1">
+                                <h3 class="text-base font-bold text-gray-800 mb-2">确认操作</h3>
+                                <p class="text-sm text-gray-600">{{ confirmDialog.message }}</p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2 mt-4">
+                            <button @click="confirmDialog.onConfirm(); confirmDialog.show = false"
+                                class="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-2 rounded-lg transition">
+                                确认
+                            </button>
+                            <button @click="confirmDialog.onCancel(); confirmDialog.show = false"
+                                class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-2 rounded-lg transition">
+                                取消
+                            </button>
+                        </div>
+                    </div>
+                </transition>
+            </div>
+        </transition>
+
+        <!-- 登录页面 -->
+        <div v-if="!isLoggedIn" class="min-h-screen gradient-bg flex items-center justify-center p-4">
+            <div class="bg-white rounded-xl shadow-2xl p-6 w-full max-w-sm">
+                <div class="text-center mb-6">
+                    <!-- <i class="fas fa-network-wired text-purple-600 text-4xl mb-3"></i> -->
+                    <h1 class="text-2xl font-bold text-gray-800">IP资源扫描系统</h1>
+                    <p class="text-gray-500 text-sm mt-1">请登录以继续</p>
+                </div>
+                <form @submit.prevent="handleLogin">
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-1">用户名</label>
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+                                <input v-model="loginForm.username" type="text" required
+                                    class="w-full pl-9 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-1">密码</label>
+                            <div class="relative">
+                                <i class="fas fa-lock absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+                                <input v-model="loginForm.password" type="password" required
+                                    class="w-full pl-9 pr-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    placeholder="请输入密码">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" :disabled="loginLoading"
+                        class="w-full mt-4 gradient-bg text-white text-sm font-semibold py-2.5 rounded-lg hover:opacity-90 transition disabled:opacity-50">
+                        <i v-if="loginLoading" class="fas fa-spinner fa-spin mr-1"></i>
+                        {{ loginLoading ? '登录中...' : '登录' }}
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- 主界面 -->
+        <div v-else>
+            <!-- 顶部导航栏 -->
+            <nav class="gradient-bg shadow-lg">
+                <div class="container mx-auto px-4 py-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-2">
+                            <!-- <i class="fas fa-network-wired text-white text-2xl"></i> -->
+                            <h1 class="text-white text-xl font-bold">IP资源扫描系统</h1>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button @click="showChangePasswordModal = true"
+                                class="bg-white bg-opacity-20 text-white px-3 py-1.5 text-sm rounded-lg hover:bg-opacity-30 transition flex items-center space-x-1">
+                                <i class="fas fa-key"></i>
+                                <span class="hidden sm:inline">修改密码</span>
+                            </button>
+                            <button @click="showAddModal = true"
+                                class="bg-white text-purple-600 px-3 py-1.5 text-sm rounded-lg font-semibold hover:bg-purple-50 transition flex items-center space-x-1">
+                                <i class="fas fa-plus"></i>
+                                <span class="hidden sm:inline">添加网段</span>
+                            </button>
+                            <button @click="handleLogout(false)"
+                                class="bg-white bg-opacity-20 text-white px-3 py-1.5 text-sm rounded-lg hover:bg-opacity-30 transition">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- 统计卡片 -->
+            <div class="container mx-auto px-4 py-3">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+                    <div class="bg-white rounded-lg shadow p-3 card-hover">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-xs">网段总数</p>
+                                <p class="text-2xl font-bold text-gray-800">{{ stats.total_networks }}</p>
+                            </div>
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-sitemap text-blue-600 text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-3 card-hover">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-xs">IP总数</p>
+                                <p class="text-2xl font-bold text-gray-800">{{ stats.total_ips }}</p>
+                            </div>
+                            <div class="bg-purple-100 p-2 rounded-full">
+                                <i class="fas fa-server text-purple-600 text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-3 card-hover">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-xs">在线IP</p>
+                                <p class="text-2xl font-bold text-green-600">{{ stats.active_ips }}</p>
+                            </div>
+                            <div class="bg-green-100 p-2 rounded-full">
+                                <i class="fas fa-check-circle text-green-600 text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-3 card-hover">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-gray-500 text-xs">离线IP</p>
+                                <p class="text-2xl font-bold text-red-600">{{ stats.inactive_ips }}</p>
+                            </div>
+                            <div class="bg-red-100 p-2 rounded-full">
+                                <i class="fas fa-times-circle text-red-600 text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 网段列表 -->
+                <div class="space-y-3">
+                    <div v-for="network in networks" :key="network.id" class="bg-white rounded-lg shadow overflow-hidden">
+                        <div class="p-4">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2">
+                                        <h2 class="text-base font-bold text-gray-800">{{ network.name }}</h2>
+                                        <span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full text-xs font-semibold">{{ network.cidr }}</span>
+                                    </div>
+                                    <p v-if="network.description" class="text-gray-600 text-xs mt-1">{{ network.description }}</p>
+                                </div>
+                                <div class="flex space-x-1.5">
+                                    <button @click="scanNetwork(network.id)" :disabled="scanStatus[network.id]?.status === 'scanning'"
+                                        class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 text-xs rounded-lg transition flex items-center space-x-1 disabled:opacity-50">
+                                        <i class="fas fa-sync-alt text-xs" :class="{'fa-spin': scanStatus[network.id]?.status === 'scanning'}"></i>
+                                        <span>{{ scanStatus[network.id]?.status === 'scanning' ? '扫描中' : '扫描' }}</span>
+                                    </button>
+                                    <button @click="toggleNetworkDetail(network.id)"
+                                        class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 text-xs rounded-lg transition">
+                                        <i class="fas" :class="expandedNetworks.includes(network.id) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+                                    </button>
+                                    <button @click="deleteNetwork(network.id)"
+                                        class="bg-red-500 hover:bg-red-600 text-white px-3 py-1.5 text-xs rounded-lg transition">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <transition name="slide">
+                                <div v-if="expandedNetworks.includes(network.id) && networkDetails[network.id]">
+                                    <div class="border-t pt-3 mt-3">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div class="flex space-x-3 text-xs">
+                                                <span class="text-gray-600">总计: <strong>{{ networkDetails[network.id].total_ips }}</strong></span>
+                                                <span class="text-green-600">在线: <strong>{{ networkDetails[network.id].active_ips }}</strong></span>
+                                                <span class="text-red-600">离线: <strong>{{ networkDetails[network.id].inactive_ips }}</strong></span>
+                                            </div>
+                                            <div class="flex space-x-1">
+                                                <button @click="filterStatus[network.id] = 'all'"
+                                                    :class="(filterStatus[network.id] || 'all') === 'all' ? 'bg-purple-500 text-white' : 'bg-gray-200 text-gray-700'"
+                                                    class="px-2 py-0.5 rounded text-xs">全部</button>
+                                                <button @click="filterStatus[network.id] = 'active'"
+                                                    :class="filterStatus[network.id] === 'active' ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-700'"
+                                                    class="px-2 py-0.5 rounded text-xs">在线</button>
+                                                <button @click="filterStatus[network.id] = 'inactive'"
+                                                    :class="filterStatus[network.id] === 'inactive' ? 'bg-red-500 text-white' : 'bg-gray-200 text-gray-700'"
+                                                    class="px-2 py-0.5 rounded text-xs">离线</button>
+                                            </div>
+                                        </div>
+                                        <div class="ip-grid">
+                                            <div v-for="ip in getFilteredIPs(network.id)" :key="ip.ip"
+                                                :class="ip.is_active ? 'bg-green-50 border-green-300' : 'bg-red-50 border-red-300'"
+                                                class="border-2 rounded p-2 text-center transition hover:shadow">
+                                                <div class="flex items-center justify-center mb-0.5">
+                                                    <i class="fas fa-circle text-xs mr-1" :class="ip.is_active ? 'text-green-500' : 'text-red-500'"></i>
+                                                    <span class="font-mono text-xs font-semibold" :class="ip.is_active ? 'text-green-800' : 'text-red-800'">
+                                                        {{ ip.ip.split('.').slice(-1)[0] }}
+                                                    </span>
+                                                </div>
+                                                <div class="text-xs text-gray-600 truncate" :title="ip.ip">{{ ip.ip }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </transition>
+                        </div>
+                    </div>
+                    <div v-if="networks.length === 0" class="bg-white rounded-lg shadow p-8 text-center">
+                        <i class="fas fa-inbox text-gray-300 text-5xl mb-3"></i>
+                        <h3 class="text-lg text-gray-600 mb-1">暂无网段</h3>
+                        <p class="text-gray-500 text-sm">点击右上角"添加网段"按钮开始添加</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 添加网段模态框 -->
+            <transition name="fade">
+                <div v-if="showAddModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-5">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-gray-800">添加网段</h3>
+                            <button @click="closeAddModal" class="text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <form @submit.prevent="addNetwork">
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">网段名称 *</label>
+                                    <input v-model="newNetwork.name" type="text" required placeholder="例如: 办公区网络"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">CIDR *</label>
+                                    <input v-model="newNetwork.cidr" type="text" required placeholder="例如: 192.168.1.0/24"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                    <p class="text-xs text-gray-500 mt-1">支持格式: 192.168.1.0/24 或 10.0.0.0/8</p>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">描述</label>
+                                    <textarea v-model="newNetwork.description" placeholder="可选的描述信息" rows="2"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2 mt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-2 rounded-lg transition">添加</button>
+                                <button type="button" @click="closeAddModal"
+                                    class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-2 rounded-lg transition">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </transition>
+
+            <!-- 修改密码模态框 -->
+            <transition name="fade">
+                <div v-if="showChangePasswordModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+                    <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-5">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-gray-800">修改密码</h3>
+                            <button @click="closeChangePasswordModal" class="text-gray-400 hover:text-gray-600">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <form @submit.prevent="handleChangePassword">
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">旧密码 *</label>
+                                    <input v-model="passwordForm.oldPassword" type="password" required placeholder="请输入旧密码"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">新密码 *</label>
+                                    <input v-model="passwordForm.newPassword" type="password" required placeholder="请输入新密码"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-semibold mb-1">确认新密码 *</label>
+                                    <input v-model="passwordForm.confirmPassword" type="password" required placeholder="请再次输入新密码"
+                                        class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                </div>
+                            </div>
+                            <div class="flex space-x-2 mt-4">
+                                <button type="submit"
+                                    class="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-2 rounded-lg transition">确认修改</button>
+                                <button type="button" @click="closeChangePasswordModal"
+                                    class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm font-semibold py-2 rounded-lg transition">取消</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </transition>
+
+            <!-- 加载提示 -->
+            <div v-if="loading" class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-40">
+                <div class="bg-white rounded-lg p-5 shadow-2xl">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-spinner fa-spin text-purple-600 text-xl"></i>
+                        <span class="text-gray-700 text-sm font-semibold">加载中...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    isLoggedIn: false,
+                    token: null,
+                    loginLoading: false,
+                    loginForm: { username: '', password: '' },
+                    showChangePasswordModal: false,
+                    passwordForm: { oldPassword: '', newPassword: '', confirmPassword: '' },
+                    networks: [],
+                    stats: { total_networks: 0, total_ips: 0, active_ips: 0, inactive_ips: 0 },
+                    showAddModal: false,
+                    newNetwork: { id: '', name: '', cidr: '', description: '' },
+                    expandedNetworks: [],
+                    networkDetails: {},
+                    scanStatus: {},
+                    filterStatus: {},
+                    loading: false,
+                    toasts: [],
+                    toastId: 0,
+                    confirmDialog: { show: false, message: '', onConfirm: () => {}, onCancel: () => {} },
+                    isLoggingOut: false,
+                    statsIntervalId: null
+                }
+            },
+            mounted() {
+                const storedToken = localStorage.getItem('token');
+                if (storedToken) {
+                    this.token = storedToken;
+                    this.isLoggedIn = true;
+                    this.loadNetworks();
+                    this.loadStats();
+                    this.startStatsPolling();
+                }
+            },
+            methods: {
+                startStatsPolling() {
+                    // 清除旧的定时器（如果存在）
+                    if (this.statsIntervalId) {
+                        clearInterval(this.statsIntervalId);
+                    }
+                    // 启动新的定时器
+                    this.statsIntervalId = setInterval(() => {
+                        if (this.isLoggedIn && this.token) {
+                            this.loadStats();
+                        }
+                    }, 30000);
+                },
+                stopStatsPolling() {
+                    if (this.statsIntervalId) {
+                        clearInterval(this.statsIntervalId);
+                        this.statsIntervalId = null;
+                    }
+                },
+                showToast(message, type = 'info') {
+                    const id = this.toastId++;
+                    this.toasts.push({ id, message, type });
+                    setTimeout(() => this.removeToast(id), 3000);
+                },
+                removeToast(id) {
+                    const index = this.toasts.findIndex(t => t.id === id);
+                    if (index > -1) this.toasts.splice(index, 1);
+                },
+                showConfirm(message) {
+                    return new Promise((resolve) => {
+                        this.confirmDialog = {
+                            show: true,
+                            message,
+                            onConfirm: () => resolve(true),
+                            onCancel: () => resolve(false)
+                        };
+                    });
+                },
+                async handleLogin() {
+                    this.loginLoading = true;
+                    try {
+                        const response = await fetch('/api/login', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(this.loginForm)
+                        });
+                        if (response.ok) {
+                            const data = await response.json();
+                            this.token = data.access_token;
+                            localStorage.setItem('token', this.token);
+                            this.isLoggedIn = true;
+                            this.loginForm = { username: '', password: '' };
+                            await this.loadNetworks();
+                            await this.loadStats();
+                            this.startStatsPolling();
+                            this.showToast('登录成功', 'success');
+                        } else {
+                            const error = await response.json();
+                            this.showToast('登录失败: ' + error.detail, 'error');
+                        }
+                    } catch (error) {
+                        console.error('登录失败:', error);
+                        this.showToast('登录失败，请检查网络连接', 'error');
+                    } finally {
+                        this.loginLoading = false;
+                    }
+                },
+                async handleLogout(auto = false) {
+                    // 防止重复执行退出
+                    if (this.isLoggingOut) return;
+                    // 如果是用户主动退出，显示确认框
+                    if (!auto) {
+                        const confirmed = await this.showConfirm('确定要退出登录吗?');
+                        if (!confirmed) {
+                            return;
+                        }
+                    }
+
+                    this.isLoggingOut = true;
+
+                    // 停止定时器
+                    this.stopStatsPolling();
+
+                    // 清除状态
+                    this.token = null;
+                    this.isLoggedIn = false;
+                    localStorage.removeItem('token');
+                    this.networks = [];
+                    this.stats = { total_networks: 0, total_ips: 0, active_ips: 0, inactive_ips: 0 };
+
+                    if (auto) {
+                        this.showToast('登录已过期，请重新登录', 'warning');
+                    } else {
+                        this.showToast('已退出登录', 'info');
+                    }
+
+                    // 重置标志
+                    setTimeout(() => {
+                        this.isLoggingOut = false;
+                    }, 500);
+                },
+                async handleChangePassword() {
+                    if (this.passwordForm.newPassword !== this.passwordForm.confirmPassword) {
+                        this.showToast('两次输入的新密码不一致', 'warning');
+                        return;
+                    }
+                    if (this.passwordForm.newPassword.length < 5) {
+                        this.showToast('新密码长度至少为5位', 'warning');
+                        return;
+                    }
+                    this.loading = true;
+                    try {
+                        const response = await fetch('/api/change-password', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${this.token}`
+                            },
+                            body: JSON.stringify({
+                                old_password: this.passwordForm.oldPassword,
+                                new_password: this.passwordForm.newPassword
+                            })
+                        });
+                        if (response.ok) {
+                            this.showToast('密码修改成功', 'success');
+                            this.closeChangePasswordModal();
+                        } else {
+                            const error = await response.json();
+                            this.showToast('修改失败: ' + error.detail, 'error');
+                        }
+                    } catch (error) {
+                        console.error('修改密码失败:', error);
+                        this.showToast('修改密码失败', 'error');
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+                closeChangePasswordModal() {
+                    this.showChangePasswordModal = false;
+                    this.passwordForm = { oldPassword: '', newPassword: '', confirmPassword: '' };
+                },
+                async apiRequest(url, options = {}) {
+                    const headers = {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${this.token}`,
+                        ...options.headers
+                    };
+                    const response = await fetch(url, { ...options, headers });
+                    if (response.status === 401) {
+                        // 自动退出，不显示确认框
+                        this.handleLogout(true);
+                        throw new Error('Unauthorized');
+                    }
+                    return response;
+                },
+                async loadNetworks() {
+                    try {
+                        const response = await this.apiRequest('/api/networks');
+                        this.networks = await response.json();
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('加载网段失败:', error);
+                        }
+                    }
+                },
+                async loadStats() {
+                    try {
+                        const response = await this.apiRequest('/api/stats');
+                        this.stats = await response.json();
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('加载统计信息失败:', error);
+                        }
+                    }
+                },
+                async addNetwork() {
+                    this.loading = true;
+                    try {
+                        const response = await this.apiRequest('/api/networks', {
+                            method: 'POST',
+                            body: JSON.stringify(this.newNetwork)
+                        });
+                        if (response.ok) {
+                            await this.loadNetworks();
+                            await this.loadStats();
+                            this.closeAddModal();
+                            this.showToast('网段添加成功', 'success');
+                        } else {
+                            const error = await response.json();
+                            this.showToast('添加失败: ' + error.detail, 'error');
+                        }
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('添加网段失败:', error);
+                            this.showToast('添加网段失败', 'error');
+                        }
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+                async deleteNetwork(networkId) {
+                    if (!(await this.showConfirm('确定要删除该网段吗?'))) return;
+                    this.loading = true;
+                    try {
+                        const response = await this.apiRequest(`/api/networks/${networkId}`, { method: 'DELETE' });
+                        if (response.ok) {
+                            await this.loadNetworks();
+                            await this.loadStats();
+                            this.showToast('网段删除成功', 'success');
+                        }
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('删除网段失败:', error);
+                            this.showToast('删除网段失败', 'error');
+                        }
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+                async scanNetwork(networkId) {
+                    this.scanStatus[networkId] = { status: 'scanning' };
+                    try {
+                        const response = await this.apiRequest(`/api/networks/${networkId}/scan`, { method: 'POST' });
+                        if (response.ok) {
+                            this.pollScanStatus(networkId);
+                            this.showToast('扫描任务已启动', 'info');
+                        }
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('启动扫描失败:', error);
+                            this.scanStatus[networkId] = { status: 'error' };
+                            this.showToast('启动扫描失败', 'error');
+                        }
+                    }
+                },
+                async pollScanStatus(networkId) {
+                    const interval = setInterval(async () => {
+                        try {
+                            const response = await this.apiRequest(`/api/networks/${networkId}/scan-status`);
+                            const status = await response.json();
+                            this.scanStatus[networkId] = status;
+                            if (status.status === 'completed' || status.status === 'error') {
+                                clearInterval(interval);
+                                await this.loadStats();
+                                if (this.expandedNetworks.includes(networkId)) {
+                                    await this.loadNetworkDetail(networkId);
+                                }
+                                if (status.status === 'completed') {
+                                    this.showToast(`扫描完成! 发现 ${status.active} 个在线IP`, 'success');
+                                }
+                            }
+                        } catch (error) {
+                            clearInterval(interval);
+                            if (error.message !== 'Unauthorized') {
+                                console.error('获取扫描状态失败:', error);
+                            }
+                        }
+                    }, 2000);
+                },
+                async toggleNetworkDetail(networkId) {
+                    const index = this.expandedNetworks.indexOf(networkId);
+                    if (index > -1) {
+                        this.expandedNetworks.splice(index, 1);
+                    } else {
+                        this.expandedNetworks.push(networkId);
+                        await this.loadNetworkDetail(networkId);
+                    }
+                },
+                async loadNetworkDetail(networkId) {
+                    try {
+                        const response = await this.apiRequest(`/api/networks/${networkId}`);
+                        const detail = await response.json();
+                        this.networkDetails[networkId] = detail;
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('加载网段详情失败:', error);
+                        }
+                    }
+                },
+                getFilteredIPs(networkId) {
+                    const detail = this.networkDetails[networkId];
+                    if (!detail || !detail.ips) return [];
+                    const filter = this.filterStatus[networkId] || 'all';
+                    if (filter === 'active') return detail.ips.filter(ip => ip.is_active);
+                    else if (filter === 'inactive') return detail.ips.filter(ip => !ip.is_active);
+                    return detail.ips;
+                },
+                closeAddModal() {
+                    this.showAddModal = false;
+                    this.newNetwork = { id: '', name: '', cidr: '', description: '' };
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
