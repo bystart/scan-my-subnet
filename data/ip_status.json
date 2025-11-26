@@ -3,1526 +3,4068 @@
     {
       "ip": "192.168.30.1",
       "is_active": true,
-      "last_checked": "2025-11-25T11:19:05.156397",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:00.957225",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.2",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:05.999125",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.900197",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.3",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.002373",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.906631",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.4",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008417",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.909604",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.5",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.002456",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.909680",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.6",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008446",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.913828",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.7",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008349",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.913763",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.8",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008468",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.913853",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.9",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008520",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.913875",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.10",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008487",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.921548",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.11",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008505",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.921491",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.12",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022583",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.921565",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.13",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022608",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.927368",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.14",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.008536",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.921579",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.15",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022525",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.929442",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.16",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022567",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.929417",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.17",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022619",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.933282",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.18",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022630",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.929457",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.19",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.022640",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.933335",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.20",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033458",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.933320",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.21",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033490",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.939980",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.22",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033513",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.940064",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.23",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033558",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.937734",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.24",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033522",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.937771",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.25",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033503",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.940038",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.26",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033540",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.940052",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.27",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033531",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.940076",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.28",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033567",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.945711",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.29",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033550",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.948960",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.30",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033575",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.947068",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.31",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.033584",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.947053",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.32",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.046908",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.948985",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.33",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.046939",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.948998",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.34",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.046950",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.949008",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.35",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.046967",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.949017",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.36",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.046959",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.949027",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.37",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.052263",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956435",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.38",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.052276",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.955290",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.39",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.052300",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956374",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.40",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.052237",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956461",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.41",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.052293",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956414",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.42",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.057175",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956450",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.43",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.057143",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.962423",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.44",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.057166",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.956470",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.45",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.061158",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.964153",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.46",
       "is_active": true,
-      "last_checked": "2025-11-25T11:19:05.063944",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:00.957270",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.47",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.061135",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.962451",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.48",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.062984",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.964172",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.49",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.069263",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.964183",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.50",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.071092",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.964192",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.51",
-      "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.070098",
-      "hostname": null
+      "is_active": true,
+      "last_checked": "2025-11-26T11:34:00.965912",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.52",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:06.165565",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.968400",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.53",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.012080",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:01.970930",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.54",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.017166",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.912959",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.55",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.014547",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.915152",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.56",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.019487",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.920727",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.57",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.024290",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.924618",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.58",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.021642",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.920769",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.59",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.025937",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.928136",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.60",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.028518",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.928108",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.61",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.028473",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.928154",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.62",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.028540",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.932060",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.63",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.032807",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.933309",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.64",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.034178",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.934577",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.65",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.035417",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.934601",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.66",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.035437",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.937324",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.67",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.038733",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.938454",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.68",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.038766",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.938479",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.69",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.041189",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.941026",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.70",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.042895",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.942176",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.71",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.045017",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.943346",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.72",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.044977",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.943371",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.73",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.045007",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.945495",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.74",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.048361",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.947836",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.75",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.049597",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.946683",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.76",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.050979",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.950328",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.77",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.051003",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.949051",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.78",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.050916",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.950301",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.79",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.051015",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.950318",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.80",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.056751",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.953269",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.81",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.056768",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.956246",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.82",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.056786",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.955369",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.83",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.055755",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.954331",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.84",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.056778",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.960884",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.85",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062117",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.958118",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.86",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.056795",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.959016",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.87",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062091",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.961732",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.88",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062126",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.958999",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.89",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062133",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.964325",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.90",
-      "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.068471",
-      "hostname": null
+      "is_active": true,
+      "last_checked": "2025-11-26T11:34:01.967584",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.91",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.067531",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.964348",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.92",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.068485",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.964339",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.93",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062146",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.967043",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.94",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.062139",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.967057",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.95",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.071696",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.969706",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.96",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.068495",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.967066",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.97",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.068502",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.973879",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.98",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.072658",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.969686",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.99",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.073680",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.971558",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.100",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.079048",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.971581",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.101",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.077987",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.971573",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.102",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:07.171158",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.975402",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.103",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.024723",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.976505",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.104",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.026677",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:02.978407",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.105",
-      "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.030619",
-      "hostname": null
+      "is_active": true,
+      "last_checked": "2025-11-26T11:34:02.926792",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.106",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.030685",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.924486",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.107",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.036025",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.928867",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.108",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.040781",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.933392",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.109",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.035966",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.935208",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.110",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.043093",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.940811",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.111",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.043042",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.935241",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.112",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.043075",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.940841",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.113",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.043107",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.939318",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.114",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053384",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.940856",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.115",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053417",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.940868",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.116",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.051004",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.946857",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.117",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053432",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.948435",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.118",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053444",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.952439",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.119",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.064481",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.949760",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.120",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053456",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.949793",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.121",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.053469",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.954042",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.122",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.065865",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.956218",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.123",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.065898",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.959172",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.124",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068723",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.956250",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.125",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068734",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.961497",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.126",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068691",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.961537",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.127",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068754",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.966195",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.128",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068744",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.964772",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.129",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068773",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.966169",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.130",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068764",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.966208",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.131",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068792",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.970344",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.132",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068782",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.970386",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.133",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.068800",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.970502",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.134",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.081533",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.970519",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.135",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.082462",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.975787",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.136",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084821",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.976981",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.137",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.082477",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.976924",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.138",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084792",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.976951",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.139",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084839",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.981360",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.140",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084831",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.981406",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.141",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084855",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.981394",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.142",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084847",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.981415",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.143",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084872",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.981424",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.144",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084886",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.986674",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.145",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084894",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.986684",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.146",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084864",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.986619",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.147",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084901",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.986658",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.148",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084879",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.986693",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.149",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.084909",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990812",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.150",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.097356",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990860",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.151",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.098704",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990868",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.152",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:08.181612",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990839",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.153",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.037313",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990851",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.154",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.040168",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:03.990876",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.155",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:08.113886",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:03.996961",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.156",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.043185",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.934739",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.157",
-      "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.047107",
-      "hostname": null
+      "is_active": true,
+      "last_checked": "2025-11-26T11:34:04.285264",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.158",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.049247",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.943845",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.159",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.053222",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.946051",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.160",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.051304",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.947896",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.161",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.055075",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.949920",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.162",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.058997",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.949950",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.163",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.057577",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.953057",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.164",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.061860",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.954856",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.165",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.061785",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.954886",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.166",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.065344",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.958300",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.167",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.065306",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.958348",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.168",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.068472",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.963233",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.169",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.070702",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.958332",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.170",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.072480",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.963271",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.171",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.072502",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.963286",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.172",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.074769",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.967022",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.173",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.075947",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.968363",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.174",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.077074",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.969806",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.175",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.080092",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.971662",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.176",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.081124",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.971708",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.177",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.083439",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.971684",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.178",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.082398",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.971697",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.179",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.087458",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.976720",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.180",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.083457",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.976750",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.181",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.086274",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.976761",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.182",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.087448",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.980008",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.183",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.087429",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.981352",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.184",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.090616",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.981368",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.185",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:08.098686",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:04.984345",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.186",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.090633",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.986487",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.187",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.099062",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.985350",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.188",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.092694",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.988290",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.189",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.095493",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.988308",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.190",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101080",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992775",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.191",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101112",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.988318",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.192",
-      "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101061",
-      "hostname": null
+      "is_active": true,
+      "last_checked": "2025-11-26T11:34:04.013167",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.193",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101104",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992764",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.194",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101098",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992784",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.195",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101090",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992792",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.196",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101119",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992800",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.197",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.101126",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.998659",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.198",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.107857",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.999718",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.199",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.108879",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.999739",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.200",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.110075",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.999749",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.201",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.110090",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.999760",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.202",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.110098",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.003448",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.203",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.119278",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.003426",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.204",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:09.188742",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.003457",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.205",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.050851",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.005024",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.206",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.170892",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:05.018379",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.207",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.056157",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.301210",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.208",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.056348",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.946936",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.209",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.061161",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.955687",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.210",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.061094",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.957122",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.211",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.064292",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.955595",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.212",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.063582",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.961191",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.213",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.068516",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.962151",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.214",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.141577",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:05.963521",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.215",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.073417",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.961276",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.216",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.074083",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.963475",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.217",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.073548",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.969520",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.218",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.077944",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.970246",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.219",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.080703",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.971830",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.220",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.078100",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.969459",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.221",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.080346",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.974155",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.222",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.080524",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.974083",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.223",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.085129",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.977191",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.224",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.087703",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.978672",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.225",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.085066",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.977108",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.226",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.087476",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.978765",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.227",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.087420",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.982549",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.228",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.093877",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.982431",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.229",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.094140",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.985032",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.230",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.095261",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.982500",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.231",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.094103",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.984979",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.232",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.095086",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.988126",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.233",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.096943",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:05.985054",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.234",
-      "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.096925",
-      "hostname": null
+      "is_active": false,
+      "last_checked": "2025-11-26T11:34:05.990871",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.235",
       "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.099906",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:04.992732",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.236",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.100856",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.994068",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.237",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.102535",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.990928",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.238",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.100941",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.996151",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.239",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.107333",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.998119",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.240",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.107161",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.999593",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.241",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.108696",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.999666",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.242",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.108783",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.002228",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.243",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.107259",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.003180",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.244",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.107486",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.003134",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.245",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113666",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.002182",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.246",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113918",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.005877",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.247",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113607",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.005905",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.248",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113849",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.003018",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.249",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113686",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.008732",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.250",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.115759",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.005753",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.251",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.113705",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.008686",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.252",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.117903",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.011333",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.253",
       "is_active": false,
-      "last_checked": "2025-11-25T11:19:10.118930",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:06.009449",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     },
     {
       "ip": "192.168.30.254",
       "is_active": true,
-      "last_checked": "2025-11-25T11:19:09.118705",
-      "hostname": null
+      "last_checked": "2025-11-26T11:34:05.011622",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    }
+  ],
+  "2f2bd4ca-3003-402d-aa49-996489733384": [
+    {
+      "ip": "192.168.100.1",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119749",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.2",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.067337",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.3",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119783",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.4",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119792",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.5",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119800",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.6",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119806",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.7",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119813",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.8",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119819",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.9",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119826",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.10",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119832",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.11",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119838",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.12",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.084659",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.13",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119844",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.14",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119850",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.15",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.089438",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.16",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119856",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.17",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119863",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.18",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119869",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.19",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119875",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.20",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119882",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.21",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119888",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.22",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.098718",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.23",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119894",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.24",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119900",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.25",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.100645",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.26",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.103143",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.27",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.106956",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.28",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119907",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.29",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119913",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.30",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.104857",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.31",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119919",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.32",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119925",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.33",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119932",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.34",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119938",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.35",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.112415",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.36",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119944",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.37",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.114463",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.38",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119950",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.39",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119957",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.40",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.116190",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.41",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.116232",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.42",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119963",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.43",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.121588",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.44",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.119970",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.45",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.144703",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.46",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.146027",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.47",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.123086",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.48",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.146041",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.49",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.123132",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.50",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.146048",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.51",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148555",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.52",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148572",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.53",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148579",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.54",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148585",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.55",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.128890",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.56",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.128903",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.57",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.132240",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.58",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.132269",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.59",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148592",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.60",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.134497",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.61",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.135676",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.62",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.135696",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.63",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.137915",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.64",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.137939",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.65",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.140089",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.66",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.140070",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.67",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.142928",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.68",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.142899",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.69",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.144745",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.70",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.148598",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.71",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.144767",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.72",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.144801",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.73",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.144781",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.74",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.144791",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.75",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.149502",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.76",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.150465",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.77",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.153435",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.78",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.153462",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.79",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.150473",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.80",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.150451",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.81",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.150481",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.82",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:58.154935",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.83",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155245",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.84",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155254",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.85",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155269",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.86",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155229",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.87",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155261",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.88",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155277",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.89",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.155284",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.90",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.162768",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.91",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.163701",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.92",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.163718",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.93",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.163729",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.94",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:25:59.163737",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.95",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.080236",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.96",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.094929",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.97",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.097238",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.98",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.109491",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.99",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.110996",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.100",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.109390",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.101",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.116216",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.102",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.113812",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.103",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.123117",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.104",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.116854",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.105",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.123144",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.106",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.121943",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.107",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.122968",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.108",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.128852",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.109",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.125772",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.110",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.127316",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.111",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.128821",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.112",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.130170",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.113",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.132615",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.114",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.131467",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.115",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.135755",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.116",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.137931",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.117",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.137947",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.118",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.137958",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.119",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.140794",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.120",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.144366",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.121",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.143506",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.122",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.142200",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.123",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.144381",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.124",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.146158",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.125",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.146991",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.126",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.150496",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.127",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.152603",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.128",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.152620",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.129",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.150515",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.130",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.155204",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.131",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:25:59.155237",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.132",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.154763",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.133",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.154783",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.134",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.158037",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.135",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.160235",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.136",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.161273",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.137",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.156790",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.138",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.158021",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.139",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.161286",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.140",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.161296",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.141",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.163740",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.142",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.165691",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.143",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.164525",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.144",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.165714",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.145",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.165706",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.146",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.169212",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.147",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.168073",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.148",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.172335",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.149",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.169226",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.150",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.172328",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.151",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.172297",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.152",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:00.172319",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.153",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.093689",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.154",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.103699",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.155",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.105992",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.156",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.112221",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.157",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.115199",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.158",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.118504",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.159",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.120092",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.160",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.122950",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.161",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.125524",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.162",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.132003",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.163",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.132037",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.164",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.128107",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.165",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.133995",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.166",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.133966",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.167",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.133986",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.168",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.134004",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.169",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.138023",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.170",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.139039",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.171",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.139026",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.172",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.139047",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.173",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.141281",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.174",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.145516",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.175",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.146539",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.176",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.147535",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.177",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.147548",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.178",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.150323",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.179",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.150339",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.180",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.150349",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.181",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.149466",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.182",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.153179",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.183",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.153199",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.184",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.156007",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.185",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.156037",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.186",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.158916",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.187",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.158895",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.188",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.158925",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.189",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.158933",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.190",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.162998",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.191",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.163030",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.192",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.163042",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.193",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.165830",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.194",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.167337",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.195",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.169505",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.196",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.167359",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.197",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.169516",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.198",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.172454",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.199",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.172343",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.200",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.172476",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.201",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.172349",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.202",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.177851",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.203",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:00.177876",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.204",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.174247",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.205",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.174594",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.206",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.176511",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.207",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.176687",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.208",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.177743",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.209",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.178734",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.210",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.179546",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.211",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.180425",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.212",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.181152",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.213",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:01.181937",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.214",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.106224",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.215",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.139911",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.216",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.140722",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.217",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.140018",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.218",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.140050",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.219",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.140660",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.220",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.144725",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.221",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.144636",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.222",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.146147",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.223",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.146681",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.224",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.144757",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.225",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.144913",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.226",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.149332",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.227",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.149275",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.228",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.155146",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.229",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.155405",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.230",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.155185",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.231",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.155051",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.232",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.156048",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.233",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.160126",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.234",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.160451",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.235",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.160584",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.236",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.160026",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.237",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.160528",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.238",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.165437",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.239",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.165889",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.240",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.165936",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.241",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.166012",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.242",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.169480",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.243",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.165318",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.244",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.172169",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.245",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.172299",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.246",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.172425",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.247",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.174211",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.248",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.175376",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.249",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.174383",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.250",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.174400",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.251",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.176569",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.252",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.176555",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.253",
+      "is_active": false,
+      "last_checked": "2025-11-26T11:26:02.180992",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
+    },
+    {
+      "ip": "192.168.100.254",
+      "is_active": true,
+      "last_checked": "2025-11-26T11:26:01.179607",
+      "hostname": null,
+      "open_ports": [],
+      "ports_scanned": false
     }
   ]
 }

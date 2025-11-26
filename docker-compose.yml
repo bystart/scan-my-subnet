@@ -6,11 +6,12 @@ services:
     container_name: ip-network-monitor
     ports:
       - "8000:8000"
-    volumes:
-      # 持久化数据目录
-      - ./data:/app/data
+    # volumes:
+      # - ./data:/app/data
     restart: unless-stopped
-    # 使用host网络模式以便ping内网IP
     network_mode: "host"
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
     environment:
       - TZ=Asia/Shanghai

@@ -2,16 +2,16 @@ FROM docker.1ms.run/python:3.11-slim-bookworm
 
 WORKDIR /app
 
-
 RUN sed -i \
       -e 's|http://deb.debian.org|https://mirrors.aliyun.com|g' \
       -e 's|http://security.debian.org|https://mirrors.aliyun.com|g' \
       /etc/apt/sources.list.d/debian.sources
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends iputils-ping && \
+    apt-get install -y --no-install-recommends \
+    nmap \
+    iputils-ping && \
     rm -rf /var/lib/apt/lists/*
-
 
 COPY requirements.txt .
 

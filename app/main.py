@@ -3,9 +3,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from typing import List, Optional
 import uuid
-from app.models import NetworkSegment, NetworkSegmentWithIPs, ScanRequest
+from app.models import NetworkSegment, NetworkSegmentWithIPs, ScanRequest, PortScanRequest
 from app.storage import JSONStorage
-from app.services import scan_network_segment, quick_check_ips
+from app.services import scan_network_segment, scan_host_info, NMAP_AVAILABLE
 from app.auth import (
     Token, LoginRequest, ChangePasswordRequest,
     create_access_token, decode_token
@@ -27,6 +27,10 @@ user_storage = UserStorage()
 
 # 存储扫描任务状态
 scan_tasks = {}
+# 存储端口扫描任务状态
+port_scan_tasks = {}
+# 存储独立主机扫描任务状态
+host_scan_tasks = {}
 
 
 # JWT认证依赖
@@ -54,6 +58,21 @@ async def get_current_user(authorization: Optional[str] = Header(None)) -> str:
 async def root():
     """返回前端页面"""
     return FileResponse("static/index.html")
+
+
+@app.get("/api/check-nmap")
+async def check_nmap():
+    """检查nmap是否可用"""
+    if NMAP_AVAILABLE:
+        return {
+            "available": True,
+            "message": "nmap已安装，所有功能可用"
+        }
+    else:
+        return {
+            "available": False,
+            "message": "nmap未安装。网段扫描功能正常（使用ping检测），但主机详细扫描功能受限"
+        }
 
 
 @app.post("/api/login", response_model=Token)
@@ -242,6 +261,151 @@ async def get_stats(current_user: str = Depends(get_current_user)):
         "active_ips": total_active,
         "inactive_ips": total_ips - total_active
     }
+
+
+async def perform_port_scan(network_id: str, ip: str, start_port: int, end_port: int):
+    """执行端口扫描任务（使用nmap）"""
+    scan_key = f"{network_id}:{ip}"
+    try:
+        if not NMAP_AVAILABLE:
+            port_scan_tasks[scan_key] = {
+                "status": "error",
+                "message": "nmap未安装，无法执行端口扫描。请安装nmap后重试。"
+            }
+            return
+
+        port_scan_tasks[scan_key] = {"status": "scanning", "progress": 0}
+
+        # 获取网段的IP列表
+        ip_list = await storage.get_segment_ips(network_id)
+
+        # 查找指定的IP
+        target_ip = next((ip_obj for ip_obj in ip_list if ip_obj.ip == ip), None)
+
+        if not target_ip:
+            port_scan_tasks[scan_key] = {"status": "error", "message": "IP不存在"}
+            return
+
+        if not target_ip.is_active:
+            port_scan_tasks[scan_key] = {"status": "error", "message": "IP不在线"}
+            return
+
+        # 使用nmap执行完整扫描
+        scan_result = await scan_host_info(ip, start_port, end_port)
+
+        # 更新IP的端口信息
+        target_ip.open_ports = scan_result.get('open_ports', [])
+        target_ip.ports_scanned = True
+
+        # 更新IP列表
+        for idx, ip_obj in enumerate(ip_list):
+            if ip_obj.ip == ip:
+                ip_list[idx] = target_ip
+                break
+
+        # 保存结果
+        await storage.update_segment_ips(network_id, ip_list)
+
+        port_scan_tasks[scan_key] = {
+            "status": "completed",
+            "ip": ip,
+            "open_ports": scan_result.get('open_ports', []),
+            "total_ports": scan_result.get('total_ports', 0)
+        }
+
+    except Exception as e:
+        port_scan_tasks[scan_key] = {"status": "error", "message": str(e)}
+
+
+@app.post("/api/networks/{network_id}/ips/{ip}/scan-ports")
+async def scan_ports(
+    network_id: str,
+    ip: str,
+    request: PortScanRequest,
+    background_tasks: BackgroundTasks,
+    current_user: str = Depends(get_current_user)
+):
+    """扫描指定IP的端口"""
+    networks = await storage.load_networks()
+    if not any(n.id == network_id for n in networks):
+        raise HTTPException(status_code=404, detail="网段不存在")
+
+    # 验证IP是否存在
+    ip_list = await storage.get_segment_ips(network_id)
+    if not any(ip_obj.ip == ip for ip_obj in ip_list):
+        raise HTTPException(status_code=404, detail="IP不存在")
+
+    # 添加后台任务
+    background_tasks.add_task(perform_port_scan, network_id, ip, request.start_port, request.end_port)
+
+    return {"message": "端口扫描任务已启动", "ip": ip}
+
+
+@app.get("/api/networks/{network_id}/ips/{ip}/port-scan-status")
+async def get_port_scan_status(
+    network_id: str,
+    ip: str,
+    current_user: str = Depends(get_current_user)
+):
+    """获取端口扫描状态"""
+    scan_key = f"{network_id}:{ip}"
+    if scan_key not in port_scan_tasks:
+        return {"status": "not_started"}
+    return port_scan_tasks[scan_key]
+
+
+async def perform_host_scan(task_id: str, ip: str, start_port: int, end_port: int):
+    """执行独立主机扫描任务（使用nmap）"""
+    try:
+        if not NMAP_AVAILABLE:
+            host_scan_tasks[task_id] = {
+                "status": "error",
+                "message": "nmap未安装，无法执行主机扫描。请安装nmap后重试。"
+            }
+            return
+
+        host_scan_tasks[task_id] = {"status": "scanning", "progress": 0}
+
+        # 执行主机扫描
+        result = await scan_host_info(ip, start_port, end_port)
+
+        host_scan_tasks[task_id] = {
+            "status": "completed",
+            **result
+        }
+
+    except Exception as e:
+        host_scan_tasks[task_id] = {"status": "error", "message": str(e)}
+
+
+@app.post("/api/scan-host")
+async def scan_host(
+    request: PortScanRequest,
+    background_tasks: BackgroundTasks,
+    ip: str,
+    current_user: str = Depends(get_current_user)
+):
+    """独立的主机扫描接口"""
+    # 生成任务ID
+    task_id = f"host_scan_{ip}_{uuid.uuid4().hex[:8]}"
+
+    # 添加后台任务
+    background_tasks.add_task(perform_host_scan, task_id, ip, request.start_port, request.end_port)
+
+    return {"message": "主机扫描任务已启动", "task_id": task_id}
+
+
+@app.get("/api/scan-host/{task_id}")
+async def get_host_scan_status(
+    task_id: str,
+    current_user: str = Depends(get_current_user)
+):
+    """获取主机扫描状态"""
+    if task_id not in host_scan_tasks:
+        return {"status": "not_started"}
+    return host_scan_tasks[task_id]
+
+
 
 
 if __name__ == "__main__":

@@ -148,6 +148,11 @@
                                 <i class="fas fa-key"></i>
                                 <span class="hidden sm:inline">修改密码</span>
                             </button>
+                            <button @click="showHostScanModal = true"
+                                class="bg-orange-500 text-white px-3 py-1.5 text-sm rounded-lg font-semibold hover:bg-orange-600 transition flex items-center space-x-1">
+                                <i class="fas fa-search"></i>
+                                <span class="hidden sm:inline">主机扫描</span>
+                            </button>
                             <button @click="showAddModal = true"
                                 class="bg-white text-purple-600 px-3 py-1.5 text-sm rounded-lg font-semibold hover:bg-purple-50 transition flex items-center space-x-1">
                                 <i class="fas fa-plus"></i>
@@ -365,6 +370,183 @@
                 </div>
             </transition>
 
+            <!-- 主机扫描模态框 - 全新设计（移动端优化） -->
+            <transition name="fade">
+                <div v-if="showHostScanModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-2 sm:p-4">
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[95vh] overflow-y-auto">
+                        <!-- 标题栏 -->
+                        <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-4 sm:px-6 py-3 sm:py-4 sticky top-0 z-10">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2 sm:space-x-3">
+                                    <div class="bg-white bg-opacity-20 p-1.5 sm:p-2 rounded-lg">
+                                        <i class="fas fa-server text-white text-lg sm:text-xl"></i>
+                                    </div>
+                                    <div class="text-white">
+                                        <h3 class="text-base sm:text-lg font-bold">主机扫描工具</h3>
+                                        <p class="text-xs opacity-90 hidden sm:block">探测目标主机的端口、系统和网络信息</p>
+                                    </div>
+                                </div>
+                                <button @click="closeHostScanModal" class="text-white hover:bg-white hover:bg-opacity-20 rounded-lg p-1.5 sm:p-2 transition">
+                                    <i class="fas fa-times text-lg sm:text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 主体内容 -->
+                        <div class="p-3 sm:p-6">
+                            <!-- 扫描配置区 -->
+                            <div class="bg-white rounded-xl shadow-sm p-3 sm:p-5 mb-3 sm:mb-5">
+                                <h4 class="text-xs sm:text-sm font-bold text-gray-700 mb-2 sm:mb-3 flex items-center">
+                                    <i class="fas fa-cog text-indigo-500 mr-2"></i>
+                                    扫描配置
+                                </h4>
+                                <form @submit.prevent="executeHostScan">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">目标IP地址 *</label>
+                                            <input v-model="hostScanForm.targetIp" type="text" required placeholder="例如: 192.168.1.100"
+                                                class="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">起始端口</label>
+                                            <input v-model.number="hostScanForm.startPort" type="number" min="1" max="65535" required
+                                                class="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                                placeholder="1">
+                                        </div>
+                                        <div>
+                                            <label class="block text-xs font-semibold text-gray-600 mb-1">结束端口</label>
+                                            <input v-model.number="hostScanForm.endPort" type="number" min="1" max="65535" required
+                                                class="w-full px-2 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                                placeholder="1024">
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 sm:mt-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+                                        <div class="text-xs text-gray-500">
+                                            <p class="flex items-center mb-1">
+                                                <i class="fas fa-lightbulb text-yellow-500 mr-1"></i>
+                                                推荐端口范围: 1-1024 (常用服务)
+                                            </p>
+                                            <p class="text-gray-400 ml-4 hidden sm:block">
+                                                💡 提示: 使用 sudo 运行服务可获得更准确的OS检测
+                                            </p>
+                                        </div>
+                                        <button type="submit" :disabled="hostScanStatus === 'scanning'"
+                                            class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-4 sm:px-6 py-2 text-xs sm:text-sm font-bold rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed shadow-md">
+                                            <i class="fas mr-2" :class="hostScanStatus === 'scanning' ? 'fa-spinner fa-spin' : 'fa-play'"></i>
+                                            {{ hostScanStatus === 'scanning' ? '扫描中...' : '开始扫描' }}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- 扫描结果区 -->
+                            <div v-if="hostScanStatus !== 'idle'" class="space-y-3 sm:space-y-4">
+                                <!-- 扫描中状态 -->
+                                <div v-if="hostScanStatus === 'scanning'" class="bg-white rounded-xl shadow-sm p-6 sm:p-8 text-center">
+                                    <div class="inline-block relative">
+                                        <div class="w-12 h-12 sm:w-16 sm:h-16 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin"></div>
+                                    </div>
+                                    <h4 class="text-gray-700 font-semibold mt-3 sm:mt-4 text-sm sm:text-base">正在扫描主机...</h4>
+                                    <p class="text-gray-500 text-xs sm:text-sm mt-1">扫描目标: {{ hostScanForm.targetIp }}</p>
+                                    <p class="text-gray-400 text-xs mt-1">端口范围: {{ hostScanForm.startPort }} - {{ hostScanForm.endPort }}</p>
+                                </div>
+
+                                <!-- 扫描完成 -->
+                                <div v-if="hostScanStatus === 'completed'" class="space-y-3 sm:space-y-4">
+                                    <!-- 主机信息卡片 -->
+                                    <div class="bg-white rounded-xl shadow-sm p-3 sm:p-5">
+                                        <h4 class="text-xs sm:text-sm font-bold text-gray-700 mb-3 sm:mb-4 flex items-center">
+                                            <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                                            主机信息
+                                        </h4>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
+                                            <!-- IP地址 -->
+                                            <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-2.5 sm:p-3">
+                                                <div class="text-xs text-blue-600 font-semibold mb-1">IP地址</div>
+                                                <div class="text-xs sm:text-sm font-bold text-blue-900 break-all">{{ hostScanResult.ip || '-' }}</div>
+                                            </div>
+                                            <!-- 主机名（仅在有值时显示） -->
+                                            <div v-if="hostScanResult.hostname && hostScanResult.hostname !== '未检测到'"
+                                                class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-2.5 sm:p-3">
+                                                <div class="text-xs text-green-600 font-semibold mb-1">主机名</div>
+                                                <div class="text-xs sm:text-sm font-bold text-green-900 break-all" :title="hostScanResult.hostname">
+                                                    {{ hostScanResult.hostname }}
+                                                </div>
+                                            </div>
+                                            <!-- 操作系统 -->
+                                            <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-2.5 sm:p-3"
+                                                :class="hostScanResult.hostname && hostScanResult.hostname !== '未检测到' ? '' : 'sm:col-span-1 lg:col-span-2'">
+                                                <div class="text-xs text-purple-600 font-semibold mb-1">操作系统</div>
+                                                <div class="text-xs sm:text-sm font-bold text-purple-900 break-words" :title="hostScanResult.os_type">
+                                                    {{ hostScanResult.os_type || 'Unknown' }}
+                                                </div>
+                                            </div>
+                                            <!-- MAC地址 -->
+                                            <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-2.5 sm:p-3">
+                                                <div class="text-xs text-orange-600 font-semibold mb-1">MAC地址</div>
+                                                <div class="text-xs font-bold text-orange-900 break-all">
+                                                    {{ hostScanResult.mac_address || '不可用' }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 端口列表 -->
+                                    <div class="bg-white rounded-xl shadow-sm p-3 sm:p-5">
+                                        <div class="flex items-center justify-between mb-3 sm:mb-4">
+                                            <h4 class="text-xs sm:text-sm font-bold text-gray-700 flex items-center">
+                                                <i class="fas fa-network-wired text-green-500 mr-2"></i>
+                                                开放端口
+                                            </h4>
+                                            <span class="bg-green-100 text-green-700 px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
+                                                {{ hostScanResult.total_ports || 0 }} 个端口
+                                            </span>
+                                        </div>
+                                        <div v-if="hostScanResult.open_ports && hostScanResult.open_ports.length > 0"
+                                            class="max-h-48 sm:max-h-64 overflow-y-auto">
+                                            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-1.5 sm:gap-2">
+                                                <div v-for="port in hostScanResult.open_ports" :key="port"
+                                                    class="bg-gradient-to-br from-emerald-400 to-emerald-500 hover:from-emerald-500 hover:to-emerald-600 text-white rounded-lg p-1.5 sm:p-2 text-center shadow-sm hover:shadow-md transition cursor-pointer group"
+                                                    :title="getPortServiceName(port)">
+                                                    <div class="text-sm sm:text-base font-bold">{{ port }}</div>
+                                                    <div class="text-xs opacity-90 truncate">{{ getPortServiceName(port) }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div v-else class="text-center py-6 sm:py-8">
+                                            <i class="fas fa-shield-alt text-gray-300 text-2xl sm:text-3xl mb-2"></i>
+                                            <p class="text-gray-500 text-xs sm:text-sm">未发现开放端口</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 初始提示 -->
+                            <div v-if="hostScanStatus === 'idle'" class="bg-white rounded-xl shadow-sm p-8 sm:p-12 text-center">
+                                <div class="inline-block p-4 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full mb-4">
+                                    <i class="fas fa-search text-indigo-600 text-4xl"></i>
+                                </div>
+                                <h4 class="text-gray-700 font-bold text-lg mb-2">准备开始扫描</h4>
+                                <p class="text-gray-500 text-sm">请在上方输入目标IP地址和端口范围，然后点击"开始扫描"</p>
+                            </div>
+                        </div>
+
+                        <!-- 底部操作栏 -->
+                        <div class="bg-gray-100 px-6 py-4 flex justify-between items-center border-t">
+                            <p class="text-xs text-gray-500">
+                                <i class="fas fa-clock mr-1"></i>
+                                扫描时间: {{ hostScanResult.scan_time ? new Date(hostScanResult.scan_time).toLocaleString('zh-CN') : '-' }}
+                            </p>
+                            <button @click="closeHostScanModal"
+                                class="bg-gray-300 hover:bg-gray-400 text-gray-700 text-sm font-semibold px-5 py-2 rounded-lg transition">
+                                <i class="fas fa-times text-xs mr-1"></i>
+                                关闭
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </transition>
+
             <!-- 加载提示 -->
             <div v-if="loading" class="fixed inset-0 bg-black bg-opacity-30 flex items-center justify-center z-40">
                 <div class="bg-white rounded-lg p-5 shadow-2xl">
@@ -389,6 +571,11 @@
                     loginForm: { username: '', password: '' },
                     showChangePasswordModal: false,
                     passwordForm: { oldPassword: '', newPassword: '', confirmPassword: '' },
+                    showHostScanModal: false,
+                    hostScanForm: { targetIp: '', startPort: 1, endPort: 1024 },
+                    hostScanStatus: 'idle', // idle, scanning, completed, error
+                    hostScanResult: { ip: '', hostname: null, mac_address: null, os_type: null, open_ports: [], total_ports: 0, scan_time: null },
+                    currentTaskId: null,
                     networks: [],
                     stats: { total_networks: 0, total_ips: 0, active_ips: 0, inactive_ips: 0 },
                     showAddModal: false,
@@ -396,6 +583,7 @@
                     expandedNetworks: [],
                     networkDetails: {},
                     scanStatus: {},
+                    portScanStatus: {},  // 端口扫描状态
                     filterStatus: {},
                     loading: false,
                     toasts: [],
@@ -410,12 +598,38 @@
                 if (storedToken) {
                     this.token = storedToken;
                     this.isLoggedIn = true;
+                    this.checkNmapAvailability();
                     this.loadNetworks();
                     this.loadStats();
                     this.startStatsPolling();
                 }
             },
             methods: {
+                async checkNmapAvailability() {
+                    try {
+                        const response = await fetch('/api/check-nmap');
+                        const data = await response.json();
+                        if (!data.available) {
+                            this.showToast('⚠️ nmap未安装，主机详细扫描功能将受限', 'warning');
+                            // 显示更详细的安装提示
+                            setTimeout(async () => {
+                                await this.showConfirm(
+                                    'nmap未安装，主机详细扫描功能将受限。\n\n' +
+                                    '✅ 网段扫描功能正常（使用ping检测）\n' +
+                                    '❌ 主机详细扫描功能受限（需要nmap）\n\n' +
+                                    '如需完整功能，请安装nmap：\n' +
+                                    'macOS: brew install nmap\n' +
+                                    'Ubuntu/Debian: sudo apt-get install nmap\n' +
+                                    'CentOS/RHEL: sudo yum install nmap\n\n' +
+                                    '安装完成后请刷新页面。\n\n' +
+                                    '💡 提示: 使用 sudo 运行服务可以启用完整的OS检测功能。'
+                                );
+                            }, 1500);
+                        }
+                    } catch (error) {
+                        console.error('检查nmap失败:', error);
+                    }
+                },
                 startStatsPolling() {
                     // 清除旧的定时器（如果存在）
                     if (this.statsIntervalId) {
@@ -467,6 +681,7 @@
                             localStorage.setItem('token', this.token);
                             this.isLoggedIn = true;
                             this.loginForm = { username: '', password: '' };
+                            this.checkNmapAvailability();
                             await this.loadNetworks();
                             await this.loadStats();
                             this.startStatsPolling();
@@ -555,6 +770,77 @@
                 closeChangePasswordModal() {
                     this.showChangePasswordModal = false;
                     this.passwordForm = { oldPassword: '', newPassword: '', confirmPassword: '' };
+                },
+                closeHostScanModal() {
+                    this.showHostScanModal = false;
+                    // 不重置数据，保留扫描结果
+                },
+                async executeHostScan() {
+                    // 验证IP格式
+                    const ipPattern = /^(\d{1,3}\.){3}\d{1,3}$/;
+                    if (!ipPattern.test(this.hostScanForm.targetIp.trim())) {
+                        this.showToast('请输入正确的IP地址格式', 'warning');
+                        return;
+                    }
+
+                    // 验证端口范围
+                    if (this.hostScanForm.startPort > this.hostScanForm.endPort) {
+                        this.showToast('起始端口不能大于结束端口', 'warning');
+                        return;
+                    }
+
+                    this.hostScanStatus = 'scanning';
+                    this.hostScanResult = { ip: '', hostname: null, mac_address: null, os_type: null, open_ports: [], total_ports: 0, scan_time: null };
+
+                    try {
+                        const ip = this.hostScanForm.targetIp.trim();
+                        const url = `/api/scan-host?ip=${encodeURIComponent(ip)}`;
+                        const response = await this.apiRequest(url, {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                start_port: this.hostScanForm.startPort,
+                                end_port: this.hostScanForm.endPort
+                            })
+                        });
+
+                        if (response.ok) {
+                            const data = await response.json();
+                            this.currentTaskId = data.task_id;
+                            this.pollHostScanStatus();
+                            this.showToast('主机扫描任务已启动', 'info');
+                        }
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('启动主机扫描失败:', error);
+                            this.hostScanStatus = 'error';
+                            this.showToast('启动主机扫描失败', 'error');
+                        }
+                    }
+                },
+                async pollHostScanStatus() {
+                    const interval = setInterval(async () => {
+                        try {
+                            const response = await this.apiRequest(`/api/scan-host/${this.currentTaskId}`);
+                            const status = await response.json();
+
+                            if (status.status === 'completed') {
+                                clearInterval(interval);
+                                this.hostScanStatus = 'completed';
+                                this.hostScanResult = status;
+                                this.showToast(`扫描完成! 发现 ${status.total_ports} 个开放端口`, 'success');
+                            } else if (status.status === 'error') {
+                                clearInterval(interval);
+                                this.hostScanStatus = 'error';
+                                this.showToast('扫描出错: ' + (status.message || '未知错误'), 'error');
+                            }
+                        } catch (error) {
+                            clearInterval(interval);
+                            if (error.message !== 'Unauthorized') {
+                                console.error('获取扫描状态失败:', error);
+                                this.hostScanStatus = 'error';
+                            }
+                        }
+                    }, 2000);
                 },
                 async apiRequest(url, options = {}) {
                     const headers = {
@@ -693,6 +979,144 @@
                             }
                         }
                     }, 2000);
+                },
+                getPortScanStatus(networkId, ip) {
+                    const scanKey = `${networkId}:${ip}`;
+                    return this.portScanStatus[scanKey]?.status || 'idle';
+                },
+                showPortScanModal(networkId, ipData) {
+                    this.portScanForm.networkId = networkId;
+                    this.portScanForm.targetIp = ipData.ip;
+                    this.portScanForm.startPort = 1;
+                    this.portScanForm.endPort = 1024;
+
+                    // 加载已有的端口数据
+                    this.portDetailsData = {
+                        ip: ipData.ip,
+                        open_ports: ipData.open_ports || []
+                    };
+
+                    // 设置初始状态
+                    if (ipData.ports_scanned && ipData.open_ports) {
+                        this.currentPortScanStatus = 'completed';
+                    } else {
+                        this.currentPortScanStatus = 'idle';
+                    }
+
+                    this.showPortScanModal_visible = true;
+                },
+                closePortScanModal() {
+                    this.showPortScanModal_visible = false;
+                    this.portScanForm = { networkId: '', targetIp: '', startPort: 1, endPort: 1024 };
+                    this.portDetailsData = { ip: '', open_ports: [] };
+                    this.currentPortScanStatus = 'idle';
+                },
+                async executePortScan() {
+                    // 验证端口范围
+                    if (this.portScanForm.startPort > this.portScanForm.endPort) {
+                        this.showToast('起始端口不能大于结束端口', 'warning');
+                        return;
+                    }
+                    if (this.portScanForm.startPort < 1 || this.portScanForm.endPort > 65535) {
+                        this.showToast('端口范围必须在 1-65535 之间', 'warning');
+                        return;
+                    }
+
+                    const { networkId, targetIp, startPort, endPort } = this.portScanForm;
+                    const scanKey = `${networkId}:${targetIp}`;
+
+                    // 设置扫描状态
+                    this.currentPortScanStatus = 'scanning';
+                    this.portScanStatus[scanKey] = { status: 'scanning' };
+                    this.portDetailsData.open_ports = [];
+
+                    try {
+                        const response = await this.apiRequest(
+                            `/api/networks/${networkId}/ips/${encodeURIComponent(targetIp)}/scan-ports`,
+                            {
+                                method: 'POST',
+                                body: JSON.stringify({ start_port: startPort, end_port: endPort })
+                            }
+                        );
+                        if (response.ok) {
+                            this.pollPortScanStatus(networkId, targetIp);
+                            this.showToast('端口扫描任务已启动', 'info');
+                        }
+                    } catch (error) {
+                        if (error.message !== 'Unauthorized') {
+                            console.error('启动端口扫描失败:', error);
+                            this.currentPortScanStatus = 'error';
+                            this.portScanStatus[scanKey] = { status: 'error' };
+                            this.showToast('启动端口扫描失败', 'error');
+                        }
+                    }
+                },
+                async pollPortScanStatus(networkId, ip) {
+                    const scanKey = `${networkId}:${ip}`;
+                    const interval = setInterval(async () => {
+                        try {
+                            const response = await this.apiRequest(
+                                `/api/networks/${networkId}/ips/${encodeURIComponent(ip)}/port-scan-status`
+                            );
+                            const status = await response.json();
+                            this.portScanStatus[scanKey] = status;
+
+                            if (status.status === 'completed' || status.status === 'error') {
+                                clearInterval(interval);
+
+                                // 刷新网段详情以获取最新的端口数据
+                                if (this.expandedNetworks.includes(networkId)) {
+                                    await this.loadNetworkDetail(networkId);
+                                }
+
+                                if (status.status === 'completed') {
+                                    // 更新弹窗中的端口数据
+                                    this.currentPortScanStatus = 'completed';
+                                    this.portDetailsData.open_ports = status.open_ports || [];
+
+                                    const portCount = status.total_ports || 0;
+                                    this.showToast(`端口扫描完成! 发现 ${portCount} 个开放端口`, 'success');
+                                } else {
+                                    this.currentPortScanStatus = 'error';
+                                }
+                            }
+                        } catch (error) {
+                            clearInterval(interval);
+                            if (error.message !== 'Unauthorized') {
+                                console.error('获取端口扫描状态失败:', error);
+                                this.currentPortScanStatus = 'error';
+                            }
+                        }
+                    }, 2000);
+                },
+                getPortServiceName(port) {
+                    const portServices = {
+                        21: 'FTP',
+                        22: 'SSH',
+                        23: 'Telnet',
+                        25: 'SMTP',
+                        53: 'DNS',
+                        80: 'HTTP',
+                        110: 'POP3',
+                        143: 'IMAP',
+                        443: 'HTTPS',
+                        445: 'SMB',
+                        465: 'SMTPS',
+                        587: 'SMTP',
+                        993: 'IMAPS',
+                        995: 'POP3S',
+                        1433: 'MSSQL',
+                        3306: 'MySQL',
+                        3389: 'RDP',
+                        5432: 'PostgreSQL',
+                        5900: 'VNC',
+                        6379: 'Redis',
+                        8080: 'HTTP-Alt',
+                        8443: 'HTTPS-Alt',
+                        9200: 'Elasticsearch',
+                        27017: 'MongoDB'
+                    };
+                    return portServices[port] || 'Unknown';
                 },
                 async toggleNetworkDetail(networkId) {
                     const index = this.expandedNetworks.indexOf(networkId);
