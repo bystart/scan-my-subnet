@@ -591,6 +591,26 @@
                     }
                 },
                 async addNetwork() {
+                    // 去除 CIDR 字段的前后空格
+                    this.newNetwork.cidr = this.newNetwork.cidr.trim();
+
+                    // 验证 CIDR 格式
+                    const cidrPattern = /^(\d{1,3}\.){3}\d{1,3}\/\d{1,2}$/;
+                    if (!cidrPattern.test(this.newNetwork.cidr)) {
+                        this.showToast('CIDR格式不正确，请使用类似 192.168.1.0/24 的格式', 'warning');
+                        return;
+                    }
+
+                    // 验证 IP 地址部分的有效性
+                    const parts = this.newNetwork.cidr.split('/');
+                    const ipParts = parts[0].split('.');
+                    const mask = parseInt(parts[1]);
+
+                    if (ipParts.some(part => parseInt(part) > 255 || parseInt(part) < 0) || mask < 0 || mask > 32) {
+                        this.showToast('CIDR格式不正确，IP地址范围应为0-255，掩码应为0-32', 'warning');
+                        return;
+                    }
+
                     this.loading = true;
                     try {
                         const response = await this.apiRequest('/api/networks', {

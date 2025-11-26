@@ -14,10 +14,15 @@ class NetworkSegment(BaseModel):
 
     @validator('cidr')
     def validate_cidr(cls, v):
+        # 去除前后空格
+        v = v.strip()
+
         try:
+            # 验证 CIDR 格式
             ipaddress.ip_network(v, strict=False)
-        except ValueError:
-            raise ValueError(f'Invalid CIDR notation: {v}')
+        except ValueError as e:
+            raise ValueError(f'无效的CIDR格式: {v}。请使用类似 192.168.1.0/24 的格式')
+
         return v
 
 
